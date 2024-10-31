@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background: url("img/sky.jpg");
+    background-size: cover;
+    position: absolute;
+    }
+.trees{
+        height: 60vh;
+        width: 650%;
+        background-image: url("img/land.png");
+        /* background-size: cover; */
+        position: absolute;
+        top: 40vh;
+        animation: landMove 20s linear infinite;
+
+    
+}
+.track{
+    background-image: url("img/track.jpg");
+    height: 30vh;
+    width: 650%;
+    position: absolute;
+    top: 70vh;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: trackMove 2s linear infinite;
+    }
+    .car{
+        height: 100px;
+        width: 350px;
+        background: url("img/car.png") no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 40px;
+        top: 65vh;
+        animation: carShake 2s linear infinite;
+}
+.wheelA{
+    height: 50px;
+    width: 50px;
+    background: url("img/wheels.png");
+    background-size: cover;
+    position: absolute;
+    bottom: -2px;
+    left: 39px;
+    animation: wheelRot .7s linear infinite;
+    }
+    .wheelB{
+        height: 50px;
+        width: 50px;
+        background: url("img/wheels.png");
+        background-size: cover;
+        position: absolute;
+        bottom: -2px;
+        right: 47px;
+        animation: wheelRot .7s linear infinite;
+    
+
+}
+@keyframes wheelRot{
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes trackMove{
+    to{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes landMove{
+    0%{ 
+        top: 35vh;
+    }
+    30%{
+        top: 45vh;
+    }
+    60%{
+        top: 38vh;
+    }
+    90%{
+        top: 41;
+    }
+    100%{
+        top: 40vh;
+        transform: translateX(-500vw);
+    }
+}
+@keyframes carShake{
+    0%{ 
+        top: 64vh;
+    }
+    50%{
+        top: 66vh;
+    }
+
+    100%{
+        top: 64vh;
+        
+    }
+}
